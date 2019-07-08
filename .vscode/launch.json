@@ -31,5 +31,11 @@
             "url": "http://localhost:3000",
             "webRoot": "${workspaceFolder}/public"
         }
+    ],
+    "compounds": [
+        {
+            "name": "Server/Client",
+            "configurations": ["Launch Server", "Launch Client"]
+        }
     ]
 }
