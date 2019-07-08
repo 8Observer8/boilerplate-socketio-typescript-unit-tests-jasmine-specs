@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": true,
+        "outDir": "../../../dist/specs/shared",
+        "types": [
+            "node",
+            "jasmine"
+        ]
+    },
+    "include": [
+        "../../../specs/shared/**/*.specs.ts"
+    ]
+}

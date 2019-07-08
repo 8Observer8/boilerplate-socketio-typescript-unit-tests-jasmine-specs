@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": false,
+        "outDir": "../../../public/pixijs/js",
+        "types": [
+            "node", "pixijs"
+        ]
+    },
+    "include": [
+        "../../../src/clients/pixijs/**/*.ts"
+    ],
+    "exclude": [
+        "../../../src/clients/pixijs/RequireConfig.ts"
+    ]
+}

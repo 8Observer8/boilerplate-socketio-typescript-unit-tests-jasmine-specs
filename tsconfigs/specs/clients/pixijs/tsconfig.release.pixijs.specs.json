@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": false,
+        "outDir": "../../../../public/specs/pixijs/js",
+        "types": [
+            "node", "jasmine"
+        ]
+    },
+    "include": [
+        "../../../../specs/clients/pixijs/**/*.ts"
+    ],
+    "exclude": [
+        "../../../../specs/clients/pixijs/RequireConfigSpecRunner.ts"
+    ]
+}

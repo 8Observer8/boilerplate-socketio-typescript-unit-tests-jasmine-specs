@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "amd",
+        "sourceMap": true,
+        "outDir": "../../../../public/specs/pixijs/js",
+        "types": [
+            "requirejs", "pixijs", "jasmine"
+        ]
+    },
+    "include": [
+        "../../../../specs/clients/pixijs/**/*.ts"
+    ]
+}

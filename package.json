@@ -1,0 +1,60 @@
+{
+    "name": "boilerplate-socketio-typepescript-unit-tests-jasmine-specs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node dist/server/Server.js",
+        "test-server": "npm run build-server-specs && node node_modules/jasmine/bin/jasmine.js --config=jasmine.server.json",
+        "test-shared": "npm run build-shared-specs && node node_modules/jasmine/bin/jasmine.js --config=jasmine.shared.json",
+
+        "Debug Server, Clients, Shared, and Specs": "",
+        "build-server": "tsc -p tsconfigs/server/tsconfig.server.json",
+        "build-server-specs": "tsc -p tsconfigs/specs/server/tsconfig.server.specs.json",
+        "build-shared-specs": "tsc -p tsconfigs/specs/shared/tsconfig.shared.specs.json",
+        "build-debug-bjs": "tsc -p tsconfigs/clients/babylonjs/tsconfig.debug.bjs.json",
+        "build-debug-pixijs": "tsc -p tsconfigs/clients/pixijs/tsconfig.debug.pixijs.json",
+        "build-debug-bjs-specs": "tsc -p tsconfigs/specs/clients/babylonjs/tsconfig.debug.bjs.specs.json",
+        "build-debug-pixijs-specs": "tsc -p tsconfigs/specs/clients/pixijs/tsconfig.debug.pixijs.specs.json",
+
+        "Release BabylonJS Client": "",
+        "compile-release-bjs": "tsc -p tsconfigs/clients/babylonjs/tsconfig.release.bjs.json",
+        "bundle-release-bjs": "browserify public/babylonjs/js/clients/babylonjs/Program.js -o public/babylonjs/js/clients/babylonjs/bundle.js",
+        "minify-release-bjs": "uglifyjs public/babylonjs/js/clients/babylonjs/bundle.js -o public/babylonjs/js/clients/babylonjs/bundle.min.js",
+        "build-release-bjs": "npm run compile-release-bjs && npm run bundle-release-bjs && npm run minify-release-bjs",
+
+        "Release PixiJS Client": "",
+        "compile-release-pixijs": "tsc -p tsconfigs/clients/pixijs/tsconfig.release.pixijs.json",
+        "bundle-release-pixijs": "browserify public/pixijs/js/clients/pixijs/Program.js -o public/pixijs/js/clients/pixijs/bundle.js",
+        "minify-release-pixijs": "uglifyjs public/pixijs/js/clients/pixijs/bundle.js -o public/pixijs/js/clients/pixijs/bundle.min.js",
+        "build-release-pixijs": "npm run compile-release-pixijs && npm run bundle-release-pixijs && npm run minify-release-pixijs",
+
+        "Release BabylonJS Client Specs": "",
+        "compile-release-bjs-specs": "tsc -p tsconfigs/specs/clients/babylonjs/tsconfig.release.bjs.specs.json",
+        "bundle-release-bjs-specs": "browserify public/specs/babylonjs/js/specs/clients/babylonjs/MyBjsClass1.specs.js public/specs/babylonjs/js/specs/clients/babylonjs/MyBjsClass2.specs.js -o public/specs/babylonjs/js/specs/clients/babylonjs/bundle.js",
+        "minify-release-bjs-specs": "uglifyjs public/specs/babylonjs/js/specs/clients/babylonjs/bundle.js -o public/specs/babylonjs/js/specs/clients/babylonjs/bundle.min.js",
+        "build-release-bjs-specs": "npm run compile-release-bjs-specs && npm run bundle-release-bjs-specs && npm run minify-release-bjs-specs",
+
+        "Release PixiJS Client Specs": "",
+        "compile-release-pixijs-specs": "tsc -p tsconfigs/specs/clients/pixijs/tsconfig.release.pixijs.specs.json",
+        "bundle-release-pixijs-specs": "browserify public/specs/pixijs/js/specs/clients/pixijs/MyPixijsClass1.specs.js public/specs/pixijs/js/specs/clients/pixijs/MyPixijsClass2.specs.js -o public/specs/pixijs/js/specs/clients/pixijs/bundle.js",
+        "minify-release-pixijs-specs": "uglifyjs public/specs/pixijs/js/specs/clients/pixijs/bundle.js -o public/specs/pixijs/js/specs/clients/pixijs/bundle.min.js",
+        "build-release-pixijs-specs": "npm run compile-release-pixijs-specs && npm run bundle-release-pixijs-specs && npm run minify-release-pixijs-specs"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "babylonjs": "^4.0.3",
+        "express": "^4.17.1",
+        "jasmine": "^3.4.0",
+        "pixi.js": "^5.0.4",
+        "socket.io": "^2.2.0"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.0",
+        "@types/jasmine": "^3.3.13",
+        "@types/socket.io": "^2.1.2",
+        "@types/socket.io-client": "^1.4.32"
+    }
+}

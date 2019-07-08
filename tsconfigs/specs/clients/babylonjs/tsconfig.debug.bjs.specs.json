@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "amd",
+        "sourceMap": true,
+        "outDir": "../../../../public/specs/babylonjs/js",
+        "types": [
+            "requirejs", "babylonjs", "jasmine"
+        ]
+    },
+    "include": [
+        "../../../../specs/clients/babylonjs/**/*.ts"
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "spec_dir": "dist/specs/shared/specs/shared",
+    "spec_files": [
+        "**/*.specs.js"
+    ],
+    "random": false
+}

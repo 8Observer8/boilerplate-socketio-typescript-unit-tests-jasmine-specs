@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": false,
+        "outDir": "../../../public/babylonjs/js",
+        "types": [
+            "node", "babylonjs"
+        ]
+    },
+    "include": [
+        "../../../src/clients/babylonjs/**/*.ts"
+    ],
+    "exclude": [
+        "../../../src/clients/babylonjs/RequireConfig.ts"
+    ]
+}
